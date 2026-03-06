@@ -1,0 +1,3 @@
+yara64.exe -r rules.yar C:\
+yara64.exe -s -m rules.yar suspicious.exe      – Show metadata
+yara64.exe -w -f rules.yar C:\                 – Fast mode

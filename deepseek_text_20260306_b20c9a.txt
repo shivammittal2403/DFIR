@@ -1,0 +1,8 @@
+wevtutil el                      – List logs
+wevtutil cl System               – Clear log
+wevtutil epl Security C:\sec.evtx – Export
+wevtutil qe Security /f:text /q:"*[System[(EventID=4624)]]" /c:100
+wevtutil qe Security /f:text /q:"*[System/EventID=4625]"
+wevtutil qe System /f:text /q:"*[System/Provider[@Name='Microsoft-Windows-PowerShell']]"
+wevtutil qe "Windows PowerShell" /f:text /q:"*[System/EventID=4104]"  – Script block logging
+wevtutil gp Security /ge /gm      – Get log configuration

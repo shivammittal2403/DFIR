@@ -1,0 +1,1 @@
+Get-ChildItem -Recurse -Include *.exe | ForEach-Object { yara64.exe -r rules.yar $_.FullName }

@@ -1,0 +1,11 @@
+net user                         – List users
+net user username
+net user username /domain         – Domain user
+net user username /active:no      – Disable
+net user username *               – Change password
+net localgroup                    – List groups
+net localgroup Administrators
+net localgroup Administrators username /add
+net localgroup "Remote Desktop Users" username /add
+net accounts                      – Password policies
+net session                       – Active network sessions

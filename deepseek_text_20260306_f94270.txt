@@ -1,0 +1,11 @@
+netstat -an                      – All connections and listening ports
+netstat -b                       – Show executable (requires admin)
+netstat -o                       – Show owning process PID
+netstat -ano | findstr :80        – Filter port 80
+netstat -ano | findstr ESTABLISHED
+netstat -r                       – Routing table
+netstat -e                       – Ethernet statistics
+netstat -s                       – Per-protocol statistics
+netstat -p TCP                   – TCP only
+netstat -p UDP                   – UDP only
+netstat -n 5                     – Refresh every 5 seconds

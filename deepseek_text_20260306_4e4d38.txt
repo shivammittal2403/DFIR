@@ -1,0 +1,17 @@
+pslist.exe         – Process list
+pskill.exe         – Kill process
+psloggedon.exe     – Who is logged on
+logonsessions.exe  – Logon sessions
+handle.exe         – Open handles
+listdlls.exe       – DLLs loaded
+procexp.exe        – Process Explorer (GUI)
+procmon.exe        – Process Monitor (GUI)
+autoruns.exe       – Persistence scanner
+tcpview.exe        – Network connections
+psexec.exe         – Remote execution
+sigcheck.exe       – File signature/version
+strings.exe        – Extract strings
+streams.exe        – ADS manager
+accesschk.exe      – Effective permissions
+whois.exe          – Whois lookup
+psinfo.exe         – System info

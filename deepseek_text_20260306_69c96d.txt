@@ -1,0 +1,8 @@
+grep -r "malware" /mnt/c/
+find /mnt/c -name "*.exe" -size +10M
+lsof -i
+netstat -tulpn
+ps auxf
+ss -tunap
+iptables -L
+journalctl -xe

@@ -1,0 +1,10 @@
+sc query                         – List all services
+sc queryex type= service          – Extended
+sc query state= all               – All states
+sc query | findstr /i "running"   – Running services
+sc qc ServiceName                 – Query config
+sc sdshow ServiceName             – Security descriptor
+sc start ServiceName
+sc stop ServiceName
+sc delete ServiceName
+sc config ServiceName start= disabled

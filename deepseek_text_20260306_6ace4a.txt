@@ -1,0 +1,7 @@
+auditpol /get /category:*
+auditpol /set /category:"System" /success:enable /failure:enable
+auditpol /set /subcategory:"Process Creation" /success:enable
+auditpol /list /subcategory:*
+wevtutil sl Security /ms:4294967295           – Increase log size
+wevtutil sl Application /retention:true       – Enable retention
+reg query HKLM\Software\Policies\Microsoft\Windows\PowerShell   – PowerShell logging

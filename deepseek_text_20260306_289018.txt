@@ -1,0 +1,8 @@
+schtasks /query                   – List
+schtasks /query /fo LIST /v       – Verbose
+schtasks /query /tn "TaskName"
+schtasks /query /xml /tn "TaskName" – Export as XML
+schtasks /create /tn "Task" /tr "malware.exe" /sc ONLOGON
+schtasks /change /tn "Task" /disable
+schtasks /delete /tn "Task" /f
+schtasks /run /tn "Task"

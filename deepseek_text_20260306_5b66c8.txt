@@ -1,0 +1,10 @@
+dir /a C:\Users\*\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+reg query HKLM\Software\Microsoft\Windows\CurrentVersion\Run /s
+reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Run /s
+reg query HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon /v Shell
+reg query HKLM\Software\Microsoft\Windows NT\CurrentVersion\Windows /v AppInit_DLLs
+reg query HKLM\System\CurrentControlSet\Control\Session Manager /v BootExecute
+schtasks /query /fo LIST /v | findstr /i "task name"
+wmic startup get caption,command
+wmic job list brief              – AT jobs
+wmic service get name,pathname,startmode   – Auto services

@@ -1,0 +1,8 @@
+netsh advfirewall show allprofiles
+netsh advfirewall show currentprofile
+netsh advfirewall firewall show rule name=all
+netsh advfirewall firewall show rule name="Block Malicious"
+netsh advfirewall firewall add rule name="Block IP" dir=out action=block remoteip=1.2.3.4
+netsh advfirewall set allprofiles state off          – Disable (only for testing)
+netsh advfirewall export C:\fw.wfw
+netsh advfirewall import C:\fw.wfw

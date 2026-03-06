@@ -1,0 +1,12 @@
+dir /s /a C:\                    – Recursive list including hidden
+dir /s /b /a-d *.exe              – All exe files recursively (bare format)
+dir /od                           – Order by date
+attrib -h -s -r file              – Remove hidden, system, read-only
+cipher /w:C:\                     – Wipe free space
+fsutil usn queryjournal C:        – USN journal
+fsutil usn enumdata C: 0 1        – Enumerate USN records
+icacls file /grant user:F          – Change permissions
+icacls file /save perms.txt        – Backup permissions
+findstr /s /m "malware" *.txt      – Search for string in files
+compact /c /s:C:\                  – Compress files (detect compression anomalies)
+forfiles /p C:\ /s /m *.exe /c "cmd /c echo @fdate @ftime @path"

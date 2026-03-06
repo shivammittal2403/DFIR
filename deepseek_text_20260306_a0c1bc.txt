@@ -1,0 +1,5 @@
+tasklist /m                      – Show DLLs
+listdlls.exe                      – Sysinternals (if deployed)
+handle.exe -a                     – Sysinternals (open handles)
+pslist.exe                        – Sysinternals (process list)
+psexec \\computer cmd             – Remote execution

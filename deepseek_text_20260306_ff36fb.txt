@@ -1,0 +1,15 @@
+systeminfo
+systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+driverquery                      – List drivers
+driverquery /v /fo csv > drivers.csv
+wmic os get Caption,CSDVersion,InstallDate
+wmic computersystem get domain,name,manufacturer
+wmic logicaldisk get deviceid,size,freespace
+wmic qfe list                    – Installed patches
+wmic startup list full           – Startup programs
+wmic service where started=true get name,pathname,processid
+gpresult /r                      – Group Policy results
+gpresult /h gpreport.html
+bcdedit                          – Boot configuration
+powercfg /energy                 – Energy report (forensics for activity)
+shutdown /r /t 0                 – Restart

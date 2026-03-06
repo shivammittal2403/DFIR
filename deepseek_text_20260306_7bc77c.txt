@@ -1,0 +1,9 @@
+tasklist /s computer /u domain\user /p pass
+schtasks /query /s computer
+sc \\computer query
+wmic /node:computer process list brief
+wmic /node:computer /user:user /password:pass service where started=true get name
+net use \\computer\ipc$ * /user:user          – Authenticate
+psexec \\computer -s cmd                      – Sysinternals
+winrm enumerate wmicimv2/Win32_Process        – WinRM
+winrs -r:computer cmd

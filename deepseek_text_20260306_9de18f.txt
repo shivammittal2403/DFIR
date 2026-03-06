@@ -1,0 +1,15 @@
+mkdir C:\IR\
+copy C:\Windows\System32\config\SAM C:\IR\                    (not while OS running, use shadow copy)
+vssadmin create shadow /for=C:
+copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\System32\config\SAM C:\IR\
+wevtutil epl System C:\IR\System.evtx
+wevtutil epl Security C:\IR\Security.evtx
+wevtutil epl Application C:\IR\Application.evtx
+wevtutil epl "Windows PowerShell" C:\IR\PowerShell.evtx
+reg export HKLM\Software C:\IR\HKLM-Software.reg
+reg export HKCU\Software C:\IR\HKCU-Software.reg
+reg export HKLM\System C:\IR\System.reg
+schtasks /query /xml > C:\IR\tasks.xml
+driverquery /v /fo csv > C:\IR\drivers.csv
+tasklist /v /fo csv > C:\IR\tasks.csv
+netstat -ano > C:\IR\netstat.txt

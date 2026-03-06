@@ -1,0 +1,6 @@
+dir /r                           – Show ADS
+dir /r C:\folder                 – Show ADS in folder
+more < file:stream               – Read stream
+echo data > file:stream          – Create stream
+type evil.exe > legit.txt:hidden.exe  – Hide exe in ADS
+wmic process call create "C:\path\file:stream"  – Execute ADS

@@ -1,0 +1,9 @@
+reg query HKLM\Software\Microsoft\Windows\CurrentVersion\Run
+reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+reg query HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce
+reg query HKLM\System\CurrentControlSet\Services
+reg query HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon /v Shell
+reg query "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options"
+reg query HKLM\SYSTEM\CurrentControlSet\Services /s /f "svchost"     – Search
+reg query HKLM\Software /s /f "backdoor"
+reg export HKLM\Software C:\regbackup.reg

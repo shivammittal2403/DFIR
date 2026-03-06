@@ -1,0 +1,14 @@
+tasklist                         – List processes
+tasklist /v                      – Verbose (includes window title, username)
+tasklist /svc                    – Services per process
+tasklist /m                      – DLL modules
+tasklist /fi "STATUS eq running" – Filter running processes
+tasklist /fi "USERNAME eq SYSTEM"– Filter by user
+tasklist /fi "IMAGENAME eq svchost.exe" – Filter by image name
+tasklist /fi "PID eq 1234"       – Filter by PID
+tasklist /fi "SESSION eq 1"      – Filter by session
+tasklist /s COMPUTER /u user /p pass – Remote
+taskkill /PID 1234               – Kill by PID
+taskkill /IM malware.exe /F      – Force kill by name
+taskkill /FI "USERNAME eq user"  – Kill all processes of a user
+taskkill /S server /U domain\user /PID 1234 – Remote kill
